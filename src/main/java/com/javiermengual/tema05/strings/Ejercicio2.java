@@ -9,7 +9,7 @@ public class Ejercicio2 {
         System.out.println("Introduce una frase:");
         String frase = scanner.nextLine().toLowerCase();
 
-        int vocales = frase.replaceAll("[^aeiou]", "").length();
+        int vocales = frase.replaceAll(" [^aeiou]", "").length();
         int consonantes = frase.replaceAll("[^a-z]", "").replaceAll("[aeiou]", "").length();
 
         System.out.println("Número de vocales: " + vocales);
