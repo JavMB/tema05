@@ -3,7 +3,7 @@ package com.javiermengual.tema05.arrays;
 public class Ejercicio7 {
     public static void main(String[] args) {
         int[] array = new int[100];
-        Ejercicio6.rellenarArray(array, 0, 100);
+        Ejercicio6.rellenarArray(array, 0, 101);
 
         imprimirMultiplosDe5(array);
         System.out.println();
