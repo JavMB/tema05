@@ -5,6 +5,12 @@ public class Busqueda {
 
     }
 
+    /**
+     *
+     * @param array recibe un array no ordenada
+     * @param c recibe el numero a buscar
+     * @return devuelve la posicion si la encuentra si no un -1
+     */
     public static int busquedaLineal(int[] array, int c) {
 
         for (int i = 0; i < array.length; i++) {
@@ -15,6 +21,12 @@ public class Busqueda {
         return -1;
     }
 
+    /**
+     *
+     * @param array recibe un array ordenada
+     * @param c recibe el numero a buscar
+     * @return devuelve la posicion si la encuentra y si no un -1
+     */
     public static int busquedaLinealOrdenado(int[] array, int c) {
 
         for (int i = 0; i < array.length; i++) {
