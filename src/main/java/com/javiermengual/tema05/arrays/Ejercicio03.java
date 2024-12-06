@@ -48,18 +48,18 @@ public class Ejercicio03 {
 
         StringBuilder sb = new StringBuilder();
 
-        // Determinamos el tamaño de la columna basado en la longitud máxima
+
         int tamanyoColumna = determinarLongitudMaxima(array, decimales) + padding;
 
-        // Usamos el nuevo formato: Alineación izquierda, el tamaño de la columna y los decimales
+
         String formato = "%-" + tamanyoColumna + "." + decimales + "f";
 
-        // Iteramos sobre el array para formatear y agregar cada valor
+
         for (int i = 0; i < array.length; i++) {
-            // Añadimos el número formateado con el nuevo formato
+
             sb.append(String.format(formato, array[i]));
 
-            // Si hemos alcanzado el número de columnas, añadimos un salto de línea
+
             if ((i + 1) % columnas == 0) {
                 sb.append("\n");
             }

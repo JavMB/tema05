@@ -66,4 +66,10 @@ public class Ejercicio01 {
             array[i] = aleatorio(valorMinimo, valorMaximo);
         }
     }
+
+    public static void rellenarArray(int[] array, int valorMinimo, int valorMaximo) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int)aleatorio(0,100);
+        }
+    }
 }

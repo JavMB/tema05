@@ -6,9 +6,8 @@ public class Busqueda {
     }
 
     /**
-     *
      * @param array recibe un array no ordenada
-     * @param c recibe el numero a buscar
+     * @param c     recibe el numero a buscar
      * @return devuelve la posicion si la encuentra si no un -1
      */
     public static int busquedaLineal(int[] array, int c) {
@@ -22,9 +21,8 @@ public class Busqueda {
     }
 
     /**
-     *
      * @param array recibe un array ordenada
-     * @param c recibe el numero a buscar
+     * @param c     recibe el numero a buscar
      * @return devuelve la posicion si la encuentra y si no un -1
      */
     public static int busquedaLinealOrdenado(int[] array, int c) {
@@ -40,22 +38,25 @@ public class Busqueda {
         return -1;
     }
 
-    public static int busquedaBinariaRecursiva(int[] array, int c, int inicio, int fin) {
+    public static int busquedaBinaria(int[] array, int c) {
+        int inicio = 0;
+        int fin = array.length - 1;
+        int medio;
 
-        int mitad = (inicio + fin) / 2;
+        while (inicio <= fin) {
+            medio = (fin + inicio) / 2;
+            if (array[medio] == c) {
+                return medio;
+            } else if (array[medio] > c) {
+                fin = medio - 1;
+
+            } else {
+                inicio = medio + 1;
+            }
 
 
-        if (array[mitad] == c) {
-            return mitad;
-
-        } else if (array[mitad] < c) {
-
-            return busquedaBinariaRecursiva(array, c, mitad + 1, fin);
-        } else {
-
-            return busquedaBinariaRecursiva(array, c, inicio, mitad - 1);
         }
-
+        return -1;
 
     }
 
