@@ -1,4 +1,4 @@
-package com.javiermengual.tema05.arrays.bidimensionales;
+package com.javiermengual.tema05.bidimensionales;
 
 import com.javiermengual.tema05.arrays.Ejercicio01;
 import com.javiermengual.tema05.arrays.Ejercicio03;
@@ -49,6 +49,7 @@ public class Ejercicio1 {
         }
         return matriz;
     }
+
 
     public static int determinarLongitudMaxima(double[][] matriz, int decimales) {
         int longitudMaxima = 0;

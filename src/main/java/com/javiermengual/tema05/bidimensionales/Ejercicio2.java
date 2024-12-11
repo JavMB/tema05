@@ -1,4 +1,4 @@
-package com.javiermengual.tema05.arrays.bidimensionales;
+package com.javiermengual.tema05.bidimensionales;
 
 import com.javiermengual.tema05.arrays.Ejercicio01;
 
