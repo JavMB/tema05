@@ -1,19 +1,17 @@
 package com.javiermengual.tema05.bidimensionales;
-import com.javiermengual.tema05.lib.Matriz;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
-        var matrizEnteros = Matriz.crearMatrizAleatoria(4, 8, 1000, 10000);
 
-        System.out.println(matrizToString(matrizEnteros, 5));
-        System.out.println("s");
+
         int[][] matriz = {
                 {1, 2, 3}, // Fila 0
                 {4, 5, 6}, // Fila 1
                 {7, 8, 9}  // Fila 2
         };
 
-        System.out.println(matrizToString(matrizTranspuesta(matriz), 5));
+
+        System.out.println(matrizToString(matriz, 5));
 
 
     }
@@ -64,7 +62,12 @@ public class Ejercicio4 {
         return longitudMaxima;
     }
 
-
+    /**
+     * Devuelve la matriz transpuesta (fila x columnas) de una matriz
+     *
+     * @param matriz
+     * @return
+     */
     public static int[][] matrizTranspuesta(int[][] matriz) {
         int[][] traspuesta = new int[matriz[0].length][matriz.length];
 
@@ -81,6 +84,12 @@ public class Ejercicio4 {
 
     }
 
+    /**
+     * Devuelve una array con la suma de cada fila de la matriz
+     *
+     * @param matriz
+     * @return
+     */
     public static int[] sumaFilaMatriz(int[][] matriz) {
         int sumafila = 0;
         var sumaPorFila = new int[matriz.length];
@@ -98,6 +107,12 @@ public class Ejercicio4 {
         return sumaPorFila;
     }
 
+    /**
+     * Devuelve el valor maximo de una matriz
+     *
+     * @param matriz
+     * @return
+     */
     public static int valorMaximo(int[][] matriz) {
         int valorMaximo = matriz[0][0];
         for (int[] fila : matriz) {
@@ -112,6 +127,12 @@ public class Ejercicio4 {
 
     }
 
+    /**
+     * Devuelve el valor minimo de una matriz
+     *
+     * @param matriz
+     * @return
+     */
     public static int valorMinimo(int[][] matriz) {
         int valorMinimo = matriz[0][0];
         for (int[] fila : matriz) {
@@ -126,6 +147,12 @@ public class Ejercicio4 {
 
     }
 
+    /**
+     * Devuelve la media de los valores de una matriz
+     *
+     * @param matriz
+     * @return
+     */
     public static double mediaMatriz(int[][] matriz) {
         int suma = 0;
         int contador = 0;
@@ -140,12 +167,27 @@ public class Ejercicio4 {
 
     }
 
+    /**
+     * Devuelve el valor de una matriz de una determinada posición
+     *
+     * @param fila
+     * @param columna
+     * @param matriz
+     * @return
+     */
     public static int obtenerDatoMatriz(int fila, int columna, int[][] matriz) {
 
         return matriz[fila][columna];
 
     }
 
+    /**
+     * Nos devuelve la fila de una matriz que indiquemos
+     *
+     * @param matriz
+     * @param fila
+     * @return
+     */
     public static int[] obtenerFilaMatriz(int[][] matriz, int fila) {
 
         if (fila < 0 || fila >= matriz.length) {
@@ -163,5 +205,25 @@ public class Ejercicio4 {
 
 
     }
+
+    /**
+     * Devuelve un array con los valores de una columna de la matriz
+     * @param matriz
+     * @param columna
+     * @return
+     */
+    public static int[] obtenerColumnaMatriz(int[][] matriz, int columna) {
+        int[] arrayColumna = new int[matriz.length];
+
+        for (int i = 0; i < matriz.length; i++) {
+
+            arrayColumna[i] = matriz[i][columna];
+
+        }
+        return arrayColumna;
+
+
+    }
+
 
 }

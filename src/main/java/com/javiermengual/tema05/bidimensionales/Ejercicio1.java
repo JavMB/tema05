@@ -24,6 +24,12 @@ public class Ejercicio1 {
 
     }
 
+    /**
+     * Permite rellenar una matriz pidiendo al usuario los valores
+     * @param array
+     * @param sc
+     * @return devuelve la matriz rellena
+     */
     public static double[][] rellenarMatriz(double[][] array, Scanner sc) {
 
         for (int i = 0; i < array.length; i++) {
@@ -39,6 +45,14 @@ public class Ejercicio1 {
         return array;
     }
 
+    /**
+     *  Crea una matriz aleatoria
+     * @param filas el numero de filas (arrays)
+     * @param columnas el numero de columnas (longitud de arrays)
+     * @param valorMinimo el valor minimo que puede contener
+     * @param valorMaximo el valorm maximo que puede contener
+     * @return
+     */
     public static double[][] crearMatrizAleatoria(int filas, int columnas, double valorMinimo, double valorMaximo) {
         double[][] matriz = new double[filas][columnas];
         for (int i = 0; i < matriz.length; i++) {
@@ -50,7 +64,12 @@ public class Ejercicio1 {
         return matriz;
     }
 
-
+    /**
+     * Determina la longitud maxima de un matriz
+     * @param matriz
+     * @param decimales
+     * @return
+     */
     public static int determinarLongitudMaxima(double[][] matriz, int decimales) {
         int longitudMaxima = 0;
 
@@ -65,7 +84,13 @@ public class Ejercicio1 {
 
     }
 
-
+    /**
+     * Muestra la matriz como String
+     * @param matriz
+     * @param decimales
+     * @param padding
+     * @return
+     */
     public static String matrizToString(double[][] matriz, int decimales, int padding) {
 
         StringBuilder sb = new StringBuilder();
